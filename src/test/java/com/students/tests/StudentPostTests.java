@@ -1,10 +1,9 @@
 package com.students.tests;
 
-import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;
 import com.student.model.Student;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import student.base.BaseClass;
 
 import java.util.ArrayList;
 
@@ -13,14 +12,9 @@ import static com.jayway.restassured.RestAssured.given;
 /**
  * Created by alex on 05.06.2017.
  */
-public class StudentPostTests {
+public class StudentPostTests  extends BaseClass {
 
-    @BeforeClass
-    public static void init() {
-        RestAssured.baseURI = "http://localhost";
-        RestAssured.port = 8084;
-        RestAssured.basePath = "/student";
-    }
+
 
     @Test
     public void createNewStudent() {

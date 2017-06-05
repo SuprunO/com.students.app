@@ -1,9 +1,8 @@
 package com.students.tests;
 
-import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import student.base.BaseClass;
 
 import static com.jayway.restassured.RestAssured.given;
 
@@ -12,17 +11,15 @@ import static com.jayway.restassured.RestAssured.given;
  */
 
 
-public class StudentGetTests {
-    @BeforeClass
-    public static void init() {
-        RestAssured.baseURI = "http://localhost";
-        RestAssured.port = 8084;
-        RestAssured.basePath = "/student";
-    }
+public class StudentGetTests  extends BaseClass {
 
     @Test
 
     public void getAllStudentInformation() {
+
+        //Go to folder PostmanTutorial
+        // Launch: C:\Users\alex\Desktop\PostmanTutorial>java -jar studentApp.jar --server.port=8084
+
 // given,
 // set cookies, add auth, add parameters, set header info
 // when,
